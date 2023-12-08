@@ -22,7 +22,7 @@ export default {
     padding: 15px 50px;
     display: flex;
     justify-content: flex-end;
-    align-items: center;
+    align-items: center;   
   }
 
   #logo-url {
