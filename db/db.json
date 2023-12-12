@@ -89,18 +89,8 @@
         "Pepino",
         "Tomate"
       ],
-      "status": "Solicitado",
+      "status": "Em produção",
       "id": 1
-    },
-    {
-      "name": "Vando",
-      "bread": "Italiano Branco",
-      "meat": "Alcatra",
-      "optionals": [
-        "Bacon"
-      ],
-      "status": "Solicitado",
-      "id": 2
     },
     {
       "name": "Taz",
@@ -112,6 +102,18 @@
       ],
       "status": "Solicitado",
       "id": 3
+    },
+    {
+      "name": "Calabreso",
+      "bread": "Italiano Branco",
+      "meat": "Veggie burger",
+      "optionals": [
+        "Tomate",
+        "Pepino",
+        "Cebola roxa"
+      ],
+      "status": "Solicitado",
+      "id": 4
     }
   ]
 }
