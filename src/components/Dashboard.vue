@@ -27,7 +27,7 @@
               {{ s.type }}
             </option>
           </select>
-          <button class="delete-btn">Cancel</button>
+          <button class="delete-btn" @click="deleteBurger(burger.id)">Cancel</button>
         </div>
       </div>
     </div>    
@@ -55,7 +55,7 @@ export default {
 
       console.log(this.burger);
 
-      this.getStatus()
+      this.getStatus();
 
     },
 
@@ -68,6 +68,22 @@ export default {
       this.status = data;
 
     },
+
+    async deleteBurger(id) {      
+
+      const isConfirmed = window.confirm("Are you sure?");
+
+      if (isConfirmed) {
+
+        const req = await fetch(`http://localhost:3000/burgers/${id}`, { method: 'DELETE' });
+
+        const res = await req.json();
+
+        this.getOrders();
+
+      }
+
+    }
     
   },
   mounted() {

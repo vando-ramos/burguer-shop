@@ -103,26 +103,15 @@
       "id": 2
     },
     {
-      "name": "Jerry",
-      "bread": "3 Queijos",
-      "meat": "Alcatra",
-      "optionals": [
-        "Cheddar"
-      ],
-      "status": "Solicitado",
-      "id": 3
-    },
-    {
-      "name": "Tom",
+      "name": "Taz",
       "bread": "Parmesão e Orégano",
       "meat": "Maminha",
       "optionals": [
-        "Cebola roxa",
-        "Pepino",
-        "Tomate"
+        "Bacon",
+        "Salame"
       ],
       "status": "Solicitado",
-      "id": 4
+      "id": 3
     }
   ]
 }
