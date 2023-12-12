@@ -94,7 +94,7 @@ export default {
 
       const res = await req.json();
 
-      this.msg = `Order Nº ${res.id} successfully registered`;
+      this.msg = `Order Nº ${res.id} successfully registered!`;
 
       setTimeout(() => this.msg = '', 3000);
 
