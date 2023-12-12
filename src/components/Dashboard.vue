@@ -2,12 +2,12 @@
   <div id="burger-table">
     <div>
       <div id="burger-table-header">
-        <div class="order-id">#:</div>
+        <div class="order-id">ID:</div>
         <div>Customer:</div>
         <div>Bread:</div>
         <div>Meat:</div>
         <div>Optionals:</div>
-        <div>Actions:</div>
+        <div>Order Status:</div>
       </div>
     </div>
     <div id="burger-table-rows">
@@ -23,7 +23,9 @@
         </div>
         <div>
           <select name="status" class="status">
-            <option value="">Order Status</option>
+            <option v-for="s in status" :key="s.id" value="s.type" :selected='burger.status == s.type'>
+              {{ s.type }}
+            </option>
           </select>
           <button class="delete-btn">Cancel</button>
         </div>
@@ -53,7 +55,20 @@ export default {
 
       console.log(this.burger);
 
-    }
+      this.getStatus()
+
+    },
+
+    async getStatus() {
+
+      const req = await fetch('http://localhost:3000/status');
+
+      const data = await req.json();
+
+      this.status = data;
+
+    },
+    
   },
   mounted() {
     this.getOrders();
